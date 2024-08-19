@@ -1,4 +1,4 @@
-# About
+# AquaPure
 This is a web application that spreads awareness of water-related charities, including multiple features contributed by various students. My feature was an online shop, under "src/pages/shop" that represented the mock company called "AquaPure", simulating an online shopping experience for the user which includes having a variety of products to select under various categories, able to add multiple different products to the user's shopping cart and go through a checkout process that includes the use of Loyaly Points which is gained by using another feature of the application which is used as discount for the total price of your order.
 
 
