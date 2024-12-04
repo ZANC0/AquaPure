@@ -44,13 +44,13 @@ public class ShopCartService {
 	public Optional<ShopCart> findByID(int id){
 		return cartRepository.findById((long) id);
 	}
-	public List<ShopCart> findByUserID(int userid){
+	public List<ShopCart> findByUserID(Long userid){
 		return cartRepository.findByUserid(userid);
 	}
 	public void deleteItem(int id) {
 		cartRepository.deleteById((long) id);
 	}
-	public void deleteCart(int userid){
+	public void deleteCart(Long userid){
 		cartRepository.deleteByUserid(userid);
 	}
 	

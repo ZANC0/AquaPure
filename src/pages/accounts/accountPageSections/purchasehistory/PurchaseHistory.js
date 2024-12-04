@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import ChildComponent1 from "./testkitPurchaseHistory/PurchaseHistoryTestkit";
+import ChildComponent1 from "./testkitpurchasehistory/PurchaseHistoryTestkit";
 import ChildComponent2 from "./shopPurchaseHistory/PurchaseHistoryShop";
 import "./PurchaseHistory.css";
 

@@ -51,7 +51,7 @@ public class ShopCart_Controller {
     	return cartService.findByID(Id);
     }
 	@GetMapping("/item/user/{userId}")
-	public List<ShopCart> getUserById(@PathVariable(value = "userId")int userID){
+	public List<ShopCart> getUserById(@PathVariable(value = "userId")Long userID){
 		return cartService.findByUserID(userID);
 	}
 	
@@ -61,7 +61,7 @@ public class ShopCart_Controller {
 		return "item removed from cart";
 	}
 	@DeleteMapping("/item/user/{userid}")
-	public String deleteCart(@PathVariable(value = "userid") int userId) {
+	public String deleteCart(@PathVariable(value = "userid") Long userId) {
 		cartRep.deleteAll(cartRep.findByUserid(userId));
 		return "cart cleared";
 	}

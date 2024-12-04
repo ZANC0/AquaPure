@@ -53,13 +53,13 @@ public class ShopProduct_Controller {
     // Implement GET /user/{id}
     // You will need to use @PathVariable annotation
     @GetMapping("/product/{id}")
-    public Optional<ShopProduct> getProductById(@PathVariable(value = "id") int Id) {
+    public Optional<ShopProduct> getProductById(@PathVariable(value = "id") Long Id) {
         return Optional.ofNullable(productService.findByID(Id));
     }
 
     // Implement DELETE /user{id}
     @DeleteMapping("/product/{id}")
-    public String deleteProduct(@PathVariable(value = "id") int Id) {
+    public String deleteProduct(@PathVariable(value = "id") Long Id) {
         if (productService.deleteProduct(Id) == true) {
             return "product Deleted";
         }

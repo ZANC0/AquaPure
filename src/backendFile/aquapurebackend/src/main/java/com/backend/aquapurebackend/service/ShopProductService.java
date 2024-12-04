@@ -15,7 +15,7 @@ public class ShopProductService {
 	ShopProductRepository shop_productRep;
 
 	static List<ShopProduct> productList;
-	int currentID;
+	Long currentID;
 
 	public ShopProductService() {
 		super();
@@ -25,15 +25,15 @@ public class ShopProductService {
 		return (List<ShopProduct>) shop_productRep.findAll();
 	}
 
-	public int getCurrentID() {
+	public Long getCurrentID() {
 		return currentID;
 	}
 
-	public void setCurrentID(int currentID) {
+	public void setCurrentID(Long currentID) {
 		this.currentID = currentID;
 	}
 
-	public int incCurrentID() {
+	public Long incCurrentID() {
 		currentID += 1;
 		return currentID;
 	}
@@ -42,7 +42,7 @@ public class ShopProductService {
 		productList.add(newProduct);
 	}
 
-	public ShopProduct findByID(int id) {
+	public ShopProduct findByID(Long id) {
 		Iterator<ShopProduct> it = productList.iterator();
 		while (it.hasNext()) {
 			ShopProduct product = it.next();
@@ -53,7 +53,7 @@ public class ShopProductService {
 		return null;
 	}
 
-	public boolean deleteProduct(int id) {
+	public boolean deleteProduct(Long id) {
 		ShopProduct product = findByID(id);
 		return productList.remove(product);
 	}

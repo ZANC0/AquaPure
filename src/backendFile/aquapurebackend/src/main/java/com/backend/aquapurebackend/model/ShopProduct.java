@@ -16,7 +16,7 @@ public class ShopProduct implements Serializable {
     private static final long serialVersionUID = 1L;
 	@Id
 	@Column(unique=true)
-	int productID;
+	Long productID;
 	
 	
 	String product_name;
@@ -28,14 +28,14 @@ public class ShopProduct implements Serializable {
 	String product_desc;
 	
 	
-	int catagoryID;
+	Long catagoryID;
 	
 	
 	public ShopProduct() {
 		super();
 	}
 	
-	public ShopProduct(int productID, String product_name, double product_price, String product_desc, int catagoryID) {
+	public ShopProduct(Long productID, String product_name, double product_price, String product_desc, Long catagoryID) {
 		super();
 		this.productID = productID;
 		this.product_name = product_name;
@@ -46,11 +46,11 @@ public class ShopProduct implements Serializable {
 	
 
 	
-	public int getProductID() {
+	public Long getProductID() {
 		return productID;
 	}
 
-	public void setProductID(int productID) {
+	public void setProductID(Long productID) {
 		this.productID = productID;
 	}
 
@@ -78,11 +78,11 @@ public class ShopProduct implements Serializable {
 		this.product_desc = product_desc;
 	}
 
-	public int getCatagoryID() {
+	public Long getCatagoryID() {
 		return catagoryID;
 	}
 
-	public void setCatagoryID(int catagoryID) {
+	public void setCatagoryID(Long catagoryID) {
 		this.catagoryID = catagoryID;
 	}
 

@@ -43,11 +43,11 @@ public class ShopPurchaseService {
         purchaseRep.save(newPurchase);
     }
 
-    public Optional<ShopPurchase> findByID(int id) {
-        return purchaseRep.findById((long) id);
+    public Optional<ShopPurchase> findByID(Long id) {
+        return purchaseRep.findById(id);
 
     }
-    public List<ShopPurchase> findByUserID(int user_id){
+    public List<ShopPurchase> findByUserID(Long user_id){
 		return purchaseRep.findByUserid(user_id);
 	}
     public void deletePurchase(int id){

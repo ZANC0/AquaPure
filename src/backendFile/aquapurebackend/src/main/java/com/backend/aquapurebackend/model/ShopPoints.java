@@ -11,7 +11,7 @@ public class ShopPoints implements Serializable {
     private static final long serialVersionUID = 1L;
 	@Id
 	@Column(unique=true)
-	int user_ID;
+	Long user_ID;
 	int score;
 	String email;
 	
@@ -24,15 +24,15 @@ public class ShopPoints implements Serializable {
 	public ShopPoints() {
 		super();
 	}
-	public ShopPoints(int user_ID, int score) {
+	public ShopPoints(Long user_ID, int score) {
 		super();
 		this.user_ID = user_ID;
 		this.score = score;
 	}
-	public int getUser_ID() {
+	public Long getUser_ID() {
 		return user_ID;
 	}
-	public void setUser_ID(int user_ID) {
+	public void setUser_ID(Long user_ID) {
 		this.user_ID = user_ID;
 	}
 	public int getScore() {

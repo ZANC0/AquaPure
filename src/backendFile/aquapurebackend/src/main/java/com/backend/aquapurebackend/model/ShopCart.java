@@ -12,11 +12,11 @@ public class ShopCart implements Serializable {
     private static final long serialVersionUID = 1L;
 	@Id
 	@Column(unique=true)
-	int id;
+	Long id;
 	@Column(unique = false)
-	int userid;
+	Long userid;
 	
-	int product_id;
+	Long product_id;
 	
 	int quantity;
 	
@@ -24,7 +24,7 @@ public class ShopCart implements Serializable {
 		super();
 	}
 	
-	public ShopCart(int id, int userid, int product_id, int quantity) {
+	public ShopCart(Long id, Long userid, Long product_id, int quantity) {
 		super();
 		this.id = id;
 		this.userid = userid;
@@ -32,27 +32,27 @@ public class ShopCart implements Serializable {
 		this.quantity = quantity;
 	}
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public int getUserid() {
+	public Long getUserid() {
 		return userid;
 	}
 
-	public void setUserid(int userid) {
+	public void setUserid(Long userid) {
 		this.userid = userid;
 	}
 
-	public int getProduct_id() {
+	public Long getProduct_id() {
 		return product_id;
 	}
 
-	public void setProduct_id(int product_id) {
+	public void setProduct_id(Long product_id) {
 		this.product_id = product_id;
 	}
 	

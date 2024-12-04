@@ -27,11 +27,11 @@ public class ShopPurchase_Controller {
 
     // get by id
     @GetMapping("/history/{id}")
-    public Optional<ShopPurchase> getPurchaseByID(@PathVariable(value = "id") int Id) {
+    public Optional<ShopPurchase> getPurchaseByID(@PathVariable(value = "id") Long Id) {
         return purchaseService.findByID(Id);
     }
     @GetMapping("/history/user/{userid}")
-    public List<ShopPurchase> getUserByID(@PathVariable(value = "userid")int userID){
+    public List<ShopPurchase> getUserByID(@PathVariable(value = "userid")Long userID){
         return purchaseService.findByUserID(userID);
     }
 

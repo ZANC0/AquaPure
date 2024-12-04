@@ -1,13 +1,13 @@
 package com.backend.aquapurebackend.dto;
 
 public class ShopProductPostDTO {
-    int productID;
+    Long productID;
 	String product_name;
 	double product_price;
 	String product_desc;
-	int catagoryID;
+	Long catagoryID;
 	
-	public ShopProductPostDTO(int productID, String product_name, double product_price, String product_desc, int catagoryID) {
+	public ShopProductPostDTO(Long productID, String product_name, double product_price, String product_desc, Long catagoryID) {
 
 		this.productID = productID;
 		this.product_name = product_name;
@@ -16,11 +16,11 @@ public class ShopProductPostDTO {
 		this.catagoryID = catagoryID;
 	}
 	
-	public int getProductID() {
+	public Long getProductID() {
 		return productID;
 	}
 
-	public void setProductID(int productID) {
+	public void setProductID(Long productID) {
 		this.productID = productID;
 	}
 
@@ -48,11 +48,11 @@ public class ShopProductPostDTO {
 		this.product_desc = product_desc;
 	}
 
-	public int getCatagoryID() {
+	public Long getCatagoryID() {
 		return catagoryID;
 	}
 
-	public void setCatagoryID(int catagoryID) {
+	public void setCatagoryID(Long catagoryID) {
 		this.catagoryID = catagoryID;
 	}
 

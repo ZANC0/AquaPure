@@ -1,12 +1,12 @@
 package com.backend.aquapurebackend.dto;
 
 public class ShopPurchasePostDTO {
-    int purchase_id;
-    int userid;
-    int product_id;
+    Long purchase_id;
+    Long userid;
+    Long product_id;
     int quantity;
     String date;
-    public ShopPurchasePostDTO(int purchase_id, int userid, int product_id, int quantity, String date){
+    public ShopPurchasePostDTO(Long purchase_id, Long userid, Long product_id, int quantity, String date){
         this.purchase_id = purchase_id;
         this.userid = userid;
         this.product_id = product_id;
@@ -25,22 +25,22 @@ public class ShopPurchasePostDTO {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-    public int getPurchase_id() {
+    public Long getPurchase_id() {
         return purchase_id;
     }
-    public void setPurchase_id(int purchase_id) {
+    public void setPurchase_id(Long purchase_id) {
         this.purchase_id = purchase_id;
     }
-    public int getUser_id() {
+    public Long getUser_id() {
         return userid;
     }
-    public void setUser_id(int userid) {
+    public void setUser_id(Long userid) {
         this.userid = userid;
     }
-    public int getProduct_id() {
+    public Long getProduct_id() {
         return product_id;
     }
-    public void setProduct_id(int product_id) {
+    public void setProduct_id(Long product_id) {
         this.product_id = product_id;
     }
 
