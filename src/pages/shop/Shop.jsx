@@ -11,7 +11,7 @@ import drinkware from "./item_pages/shop_assets/cupicon.png"
 import Navbar from "./Shop_Navbar.jsx"
 import book from "./item_pages/shop_assets/APNotebook.png"
 import hoodie from "./item_pages/shop_assets/APHoodie.png"
-import pouch from "./item_pages/shop_assets/APNotebook.png"
+import pouch from "./item_pages/shop_assets/APPouch.png"
 import sticker from "./item_pages/shop_assets/APSticker.png"
 import tote from "./item_pages/shop_assets/AquaPureToteBag.png"
 import cap from "./item_pages/shop_assets/APcap.png"
@@ -58,6 +58,7 @@ export default function Shop() {
     axios.get(productURL)
     .then(res => {
       setData(res.data)
+      console.log(res.data)
     })
   }
 
@@ -97,7 +98,7 @@ export default function Shop() {
     "BackPack":backpack,
   }
   const productlinks = {
-    "Recycled Sports Bottle":"/water",
+    "Recycled Sports Bottle":"/water_bottle",
     "Recycled Tote Bag Large":"/tote_bag",
     "Bamboo Covered Note Book":"/bamboo",
     "AquaPure Sticker & Badge":"/sticker",
@@ -105,7 +106,7 @@ export default function Shop() {
     "Coffee/Tea Hot Beverage Mug":"/beverage_mug",
     "Water Filter":"/water_filter",
     "Hoodie":"/hoodie",
-    "T-Shirt":"T-shirt",
+    "T-Shirt":"/T-shirt",
     "Face Mask Pack of 3":"/mask",
     "Cap":"/cap",
     "Metal Flask":"/flask",
@@ -168,7 +169,7 @@ export default function Shop() {
                 if(product.productID < 5)
                   return(
                     <li className="item">
-                      <Link to={productlinks[product.product_name]}><img alt="water" className="item_img" src={productimg[product.product_name]}/></Link>
+                      <Link to={productlinks[product.product_name]}><img alt={placeholder} className="item_img" src={productimg[product.product_name]}/></Link>
                       <p className="item_title" key={"watername"}>{product.product_name}</p>
                       <p className="item_price" key={"waterprice"}>£{product.product_price}</p>
                       <button className="item_quick_add item_quick_add1" key={product.productID} type="button" name="add" onClick={()=>{postAdd(product.productID);}}>{add_text}</button>

@@ -6,6 +6,7 @@ import ShopNotification from "../ShopNotification";
 import Navbar from "../Shop_Navbar"
 import bamboo from "../item_pages/shop_assets/APNotebook.png"
 import sticker from "../item_pages/shop_assets/APSticker.png"
+import placeholder from "../item_pages/shop_assets/placeholder.jpg"
 
 
 
@@ -126,7 +127,7 @@ export default function Shop_other() {
                 if(product.catagoryID === 2){ 
                   return(
                     <li className="item">
-                        <Link to={productlinks[product.product_name]}><img alt="water" className="item_img" src={productimg[product.product_name]}/></Link>
+                        <Link to={productlinks[product.product_name]}><img alt={placeholder} className="item_img" src={productimg[product.product_name]}/></Link>
                         <p className="item_title" key={"watername"}>{product.product_name}</p>
                         <p className="item_price" key={"waterprice"}>£{product.product_price}</p>
                         <button className="item_quick_add item_quick_add1" key={product.productID} type="button" name="add" onClick={()=>{postAdd(product.productID);}}>{add_text}</button>

@@ -6,6 +6,8 @@ import ShopNotification from "../ShopNotification";
 import Navbar from "../Shop_Navbar"
 import pouch from "../item_pages/shop_assets/APPouch.png";
 import phone from "../item_pages/shop_assets/PhoneCaseAP.png";
+import backpack from "../item_pages/shop_assets/APBackpack.png"
+import placeholder from "../item_pages/shop_assets/placeholder.jpg"
 
 
 
@@ -30,23 +32,23 @@ export default function Shop_Tech() {
   const productURL = 'http://localhost:8080/product'
   const [showpopup, setshowpopup] = useState(false)
   const [add_text,setadd_text] = useState("Add to cart")
+  
   const productimg = {
     "Laptop Pouch":pouch,
     "Phone Case":phone,
-
+    "BackPack":backpack,
   }
   const productlinks = {
-    "Laptop Pouch":"/shop/pouch",
-    "Phone Case":"/shop/phone_case"
+    "Laptop Pouch":"/pouch",
+    "Phone Case":"/phone_case",
+    "BackPack":"/backpack",
   }
-    const [check, setcheck] = useState("Add to cart");
-
-    useEffect(()=>{
-        loadUser();
-        loadCart();
-        loadProducts();
-        console.log(productimg["BackPack"])
-      },[])
+  
+  useEffect(()=>{
+      loadUser();
+      loadCart();
+      loadProducts();
+  },[])
  
   const loadUser = () => {
     axios.get(`http://localhost:8080/User/${localStorage.getItem("user_ID")}`)
@@ -69,9 +71,9 @@ export default function Shop_Tech() {
     axios.get(productURL)
     .then(res => {
       setData(res.data)
+      console.log(res.data)
     })
   }
-  const [newEntry,setEntry] = useState();
 
   const postAdd = (productid,id) => {
     if(!user){
@@ -105,13 +107,8 @@ export default function Shop_Tech() {
           }         
       })
     }
-    
-
-
-
   }
 
-  
     
   return (
     <div className="wall" key={"shoppage"}>    
@@ -124,21 +121,18 @@ export default function Shop_Tech() {
         <nav>
           <ul className="item_list">
               {productData.map(product => {
-                if(product.catagoryID === 6){ 
+                console.log(productlinks[product.product_name])
+                if(product.catagoryID === 4){ 
                   return(
                     <li className="item">
-                        <Link to={productlinks[product.product_name]}><img alt="water" className="item_img" src={productimg[product.product_name]}/></Link>
+                        <Link to={productlinks[product.product_name]}><img alt={placeholder} className="item_img" src={productimg[product.product_name]}/></Link>
                         <p className="item_title" key={"watername"}>{product.product_name}</p>
                         <p className="item_price" key={"waterprice"}>£{product.product_price}</p>
                         <button className="item_quick_add item_quick_add1" key={product.productID} type="button" name="add" onClick={()=>{postAdd(product.productID);}}>{add_text}</button>
                     </li>
                   ) 
                 }
-                else{
-                  return("")
-                }
-              }
-              )
+              })
               }
 
 
@@ -154,26 +148,7 @@ export default function Shop_Tech() {
         
         
       </div>
-      {/**
-               * -Eco Based 650 ml Sports Bottle
-               * -Recycled Tote Bag
-               * -Bamboo Note book
-               * -AquaPure sticker/badge
-               * -Recycled Travel Cup
-               * -Mug
-               * -Water filter
-               * -Hoodie
-               * -T-Shirt
-               * -Face Masks
-               * -Cap
-               * -Metal Bottle/flask
-               * -Laptop pouch
-               * -eco friendly phone case
-               * -Backpack
-               */}
     </div>
-
-    
   );
 }
 

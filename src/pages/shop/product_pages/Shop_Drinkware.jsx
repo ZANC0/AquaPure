@@ -9,6 +9,7 @@ import mug from "../item_pages/shop_assets/Beverage Mug.png"
 import filter from "../item_pages/shop_assets/water filter.png"
 import flask from "../item_pages/shop_assets/metalFlask.png"
 import Navbar from "../Shop_Navbar";
+import placeholder from "../item_pages/shop_assets/placeholder.jpg"
 
 
 
@@ -137,8 +138,8 @@ export default function Shop_drinkware() {
               {productData.map(product => {
                 if(product.catagoryID === 1){ 
                   return(
-                    <li className="item">
-                        <Link to={productlinks[product.product_name]}><img alt="water" className="item_img" src={productimg[product.product_name]}/></Link>
+                    <li className="item" key={product.productID}>
+                        <Link to={productlinks[product.product_name]}><img alt={placeholder} className="item_img" src={productimg[product.product_name]}/></Link>
                         <p className="item_title" key={"watername"}>{product.product_name}</p>
                         <p className="item_price" key={"waterprice"}>£{product.product_price}</p>
                         <button className="item_quick_add item_quick_add1" key={product.productID} type="button" name="add" onClick={()=>{postAdd(product.productID);}}>{add_text}</button>

@@ -5,5 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 public interface TestkiturlRepository extends JpaRepository<Testkiturl, Long> {
 
+    @SuppressWarnings("null")
     List<Testkiturl> findAll();
 }

@@ -45,10 +45,10 @@ import Shop_purchase from "./pages/accounts/accountPageSections/purchasehistory/
 import PurchaseHistoryTestkit from "./pages/accounts/accountPageSections/purchasehistory/testkitpurchasehistory/PurchaseHistoryTestkit.css";
 import PurchaseHistoryShop from "./pages/accounts/accountPageSections/purchasehistory/shopPurchaseHistory/PurchaseHistoryShop";
 import ShopCart from "./pages/accounts/cart/shopcart/ShopCartPage"
-import Shop_appearal from "./pages/shop/product_pages/Shop_Appearal";
-import Shop_drinks from "./pages/shop/product_pages/Shop_Drinkware"
-import Shop_other from "./pages/shop/product_pages/Shop_Other"
-import Shop_tech from "./pages/shop/product_pages/Shop_Tech";
+import Shop_Appearal from "./pages/shop/product_pages/Shop_Appearal";
+import Shop_Drinks from "./pages/shop/product_pages/Shop_Drinkware"
+import Shop_Other from "./pages/shop/product_pages/Shop_Other"
+import Shop_Tech from "./pages/shop/product_pages/Shop_Tech";
 // import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -61,13 +61,13 @@ function App() {
     setAccountType(localStorage.getItem("accountType"));
   }, []);
 
-  useEffect(() => {
-    window.scrollTo(0, scrollPos);
-  }, [location.pathname]);
+  // useEffect(() => {
+  //   window.scrollTo(0, scrollPos);
+  // }, [location.pathname]);
 
-  useEffect(() => {
-    setScrollPos(window.pageYOffset);
-  }, [location.pathname]);
+  // useEffect(() => {
+  //   setScrollPos(window.pageYOffset);
+  // }, [location.pathname]);
 
   return (
     <>
@@ -143,10 +143,10 @@ function App() {
           <Route path="/backpack" element={<Backpack />} />
           <Route path="/cap" element={<Cap />} />
           <Route path="/mask" element={<Mask />} />
-          <Route path='/shop/Shop_Appearal' element={<Shop_appearal/>}/>
-          <Route path='/shop/Shop_drinks' element={<Shop_drinks/>}/>
-          <Route path="/shop/Shop_other" element={<Shop_other/>}/>
-          <Route path="/shop/Shop_tech" element={<Shop_tech/>}/>
+          <Route path='/shop/Shop_Appearal' element={<Shop_Appearal/>}/>
+          <Route path='/shop/Shop_Drinks' element={<Shop_Drinks/>}/>
+          <Route path="/shop/Shop_Other" element={<Shop_Other/>}/>
+          <Route path="/shop/Shop_Tech" element={<Shop_Tech/>}/>
         </Routes>
       </div>
     </>
