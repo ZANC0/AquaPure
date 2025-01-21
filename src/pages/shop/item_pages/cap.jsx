@@ -3,7 +3,7 @@ import water from "./shop_assets/APcap.png";
 import { Link } from "react-router-dom";
 import {React, useEffect, useState} from 'react';
 import axios from 'axios';
-
+import back_btn from "../item_pages/shop_assets/back_arrow_icon.png"
 export default function Cap() {
 
 
@@ -78,11 +78,10 @@ export default function Cap() {
 
     return(
       <div>
+        <Link to='/shop'><button className="back"><img className="back-img" src={back_btn}></img></button></Link>
         <div className="page_item">
 
-          <div className="back">
-            <Link to="/shop"className="back_button">{"<"}</Link>
-          </div>
+          
 
           <center>
             <img alt="water" className="item_page_img" src={water}/>

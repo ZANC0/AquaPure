@@ -68,19 +68,24 @@
 }
 
 .back{
-    margin-top:-80px;
+    width:75px;
+    height:75px;
+    margin-left:150px;
+    margin-top:100px;
+    padding:5px;
+    background-color: #adadad;
+    border-style: none;
+    border-radius: 100px;
+    font-size:20px;
+    transition: ease 250ms;
 }
-.back_button{
-
-
-    text-align: center;
-    text-decoration: none;
-    color:black;
-    font-size:80px;
+.back:hover{
     cursor: pointer;
-    transition: ease 150ms;
+    background-color: #8cbccb;
 }
-
+.back-img{
+    width:50px
+}
 
 
 

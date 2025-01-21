@@ -8,10 +8,11 @@ import ShopNotification from "../ShopNotification";
 import backpack from "../item_pages/shop_assets/APBackpack.png";
 import mask from "../item_pages/shop_assets/FaceMaskAP.png";
 import tote from "../item_pages/shop_assets/AquaPureToteBag.png";
-import shirt from "../item_pages/shop_assets/tshirtAP.png"
-import hoodie from "../item_pages/shop_assets/APHoodie.png"
-import cap from "../item_pages/shop_assets/APcap.png"
-import placeholder from "../item_pages/shop_assets/placeholder.jpg"
+import shirt from "../item_pages/shop_assets/tshirtAP.png";
+import hoodie from "../item_pages/shop_assets/APHoodie.png";
+import cap from "../item_pages/shop_assets/APcap.png";
+import placeholder from "../item_pages/shop_assets/placeholder.jpg";
+import back_btn from "../item_pages/shop_assets/back_arrow_icon.png"
 
 
 export default function Shop_appearal() {  
@@ -125,7 +126,7 @@ export default function Shop_appearal() {
       <div className="page" >
         <h1 className="shop_title">AquaShop</h1>
         <Navbar/>
-        <Link to='/shop'><button className="back">BACK</button></Link>
+        <Link to='/shop'><button className="back"><img className="back-img" src={back_btn}></img></button></Link>
         <nav>
           <ul className="item_list">
               {productData.map(product => {

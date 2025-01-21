@@ -8,6 +8,7 @@ import pouch from "../item_pages/shop_assets/APPouch.png";
 import phone from "../item_pages/shop_assets/PhoneCaseAP.png";
 import backpack from "../item_pages/shop_assets/APBackpack.png"
 import placeholder from "../item_pages/shop_assets/placeholder.jpg"
+import back_btn from "../item_pages/shop_assets/back_arrow_icon.png"
 
 
 
@@ -117,7 +118,7 @@ export default function Shop_Tech() {
       
         <h1 className="shop_title">AquaShop</h1>
         <Navbar/>
-        <Link to='/shop'><button className="back">BACK</button></Link>
+        <Link to='/shop'><button className="back"><img className="back-img" src={back_btn}></img></button></Link>
         <nav>
           <ul className="item_list">
               {productData.map(product => {
