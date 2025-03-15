@@ -62,17 +62,19 @@ export default function PurchaseHistoryShop() {
               <th>Quantity</th>
               <th>Date</th>
             {
-              history.map(purchase => {
+              history.sort((a, b) => new Date(b.date) - new Date(a.date)).map(purchase => {
                 return(
                   productData.map(product=>{
                     if(product.productID === purchase.product_id){
-                      return(<tr>
+                      return(
+                      <tr>
                         <td><img className="productimg" src={productimg[product.product_name]}></img></td>
                         <td className="purchase-name">{product.product_name}</td>
                         <td className="purchase-price">£{product.product_price}</td>
                         <td>{purchase.quantity}</td>
                         <td>{purchase.date}</td>
-                      </tr>)
+                      </tr>
+                      )
                     }
                   })
                 )
